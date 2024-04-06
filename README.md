@@ -2,6 +2,12 @@
 
 自然言語の入力文を解析し、おすすめの論文をレコメンドするアプリ
 
+
+
+https://github.com/traffine/paper-recommender/assets/45656383/31141cbb-3d98-4c98-8e05-13417e3eb85a
+
+
+
 以下の機能があります。
 
 - キーワードの自動抽出
