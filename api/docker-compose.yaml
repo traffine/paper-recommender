@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  api:
+    build:
+      dockerfile: ./Dockerfile
+    platform: linux/x86_64
+    env_file:
+      - .env
+    ports:
+      - "8080:80"
+    environment:
+      - LOCAL=$LOCAL
+      - AWS_PROFILE=$AWS_PROFILE
+      - AWS_ACCOUNT_ID=$AWS_ACCOUNT_ID
+      - OPENAI_API_KEY=$OPENAI_API_KEY
+      - PINECONE_API_KEY=$PINECONE_API_KEY
+      - PINECONE_ENVIRONMENT=$PINECONE_ENVIRONMENT
+      - PINECONE_INDEX=$PINECONE_INDEX
+    volumes:
+      - ~/.aws/credentials:/root/.aws/credentials:ro
+      - ~/.aws/config:/root/.aws/config:ro
+      - ./:/code/
